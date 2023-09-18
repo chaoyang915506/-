@@ -1,0 +1,337 @@
+$btnbg: rgb(14, 170, 192);
+$btncolor: #0eaac0;
+$colorbg: #0c3c69;
+@import '@/assets/styles/variables.scss';
+
+.app_dev {
+  padding: 5px;
+}
+
+.sketch {
+  color: #fff;
+  font-size: 12px;
+
+  div {
+
+    margin: 5px 0;
+    margin-top: 10px;
+  }
+}
+
+
+.content_right {
+  height: 50%;
+  padding: 40px 25px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // background: url('../../assets/icons/common/border2.png');
+  background-image: url("/img/ui/border21.png");
+  background-size: 100% 100%;
+}
+
+.right_tile_echarts {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.right_tile_gaikuang {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  // background-image: url("/img/ui/border21.png");
+  // background-size: 100% 100%;
+
+  .gaikuang {
+    position: relative;
+    padding: 40px 25px 30px;
+    width: 100%;
+    // background-image: url("/img/ui/border21.png");
+    background-size: 100% 100%;
+    margin-bottom: 10%;
+
+    .ti {
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+
+  .data {
+    position: relative;
+    // height: 50%;
+    background: #122b54;
+    padding: 5px;
+    margin-bottom: 10%;
+    // padding: 40px 25px 40px;
+    width: 100%;
+    // background-image: url("/img/ui/border21.png");
+    // background-size: 100% 100%;
+
+    .ti {
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+}
+
+
+.left_box {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - #{$base-hearder-height} - 80px);
+
+  box-shadow: inset 3px 3px 3px #054588, inset -3px -3px 3px #054588;
+  padding: 10px;
+
+  .content_text {
+    // padding: 10px;
+    width: 100%;
+    height: 100%;
+
+    .icon_inside {
+      position: absolute;
+      padding: 0px 27px 60px 27px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 104%;
+    }
+
+
+  }
+}
+
+
+
+
+.left_nav {
+  display: flex;
+  padding: 0 20px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+//右侧的nav标题
+.right_nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 0 20px;
+
+  .right_title {
+    flex: 0.9;
+    transform: skew(-40deg);
+    width: 25%;
+    height: 20px;
+    background-color: #0eaac0;
+    text-align: center;
+    margin-right: 3%;
+    font-weight: 500;
+
+    a {
+      font-size: 12px;
+      display: inline-block;
+      transform: skew(40deg);
+    }
+  }
+}
+
+.right_content {
+  width: 100%;
+  // height: 100%;
+  height: calc(100vh - #{$base-hearder-height} - 80px);
+  // background-color: #0b163b;
+  // background: url('../../assets/icons/common/border2.png');
+  // background-image: url("/img/ui/border21.png");
+  // background-size: 100% 100%;
+}
+
+
+
+.bingli_style {
+  cursor: default;
+  color: #fff;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  font-size: 14px;
+}
+
+//公共的
+//按钮的样式
+.ponit_state {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  line-height: 4px;
+  border-radius: 50%;
+  background-color: $btncolor;
+}
+
+.left_title {
+  transform: skew(-40deg);
+  flex: 1;
+  margin-right: 10px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  background-color: $colorbg;
+  text-align: center;
+  color: $btncolor;
+  border: 0px;
+
+  a {
+    font-weight: 500;
+    display: block;
+    transform: skew(40deg);
+
+    font-size: 12px;
+  }
+
+  div {
+    transform: skew(45deg);
+    font-size: 12px;
+  }
+}
+
+//复选框的样式
+.checkbox_css {
+  width: 100%;
+  color: #fff;
+}
+
+::v-deep .checkbox_css .el-checkbox__input {
+  float: right;
+  margin-right: 1%;
+}
+
+//选中的样式
+.activeinofo {
+  color: #0f1c40 !important;
+  background-color: $btnbg  !important;
+}
+
+.box_content {
+  display: flex;
+  width: 100%;
+  // height: calc(100vh - 100px);
+}
+
+.left,
+.right,
+.middle {
+  position: relative;
+}
+
+.middle {
+  height: calc(100vh - #{$base-hearder-height} - 25px)
+}
+
+.left,
+.right {
+  width: 20%;
+}
+
+.middle_title {
+  color: #0eaac0;
+  font-size: 14px;
+}
+
+.mugang_style_one {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.mugang_style_one:hover {
+  background-color: #0f1c40;
+}
+
+
+
+// 头
+.title_info {
+  padding: 4px 10px 0;
+  position: relative;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  // font-size: 17px;
+  font-size: 14px;
+  color: #fff;
+  // padding: 1px 10px;
+  font-weight: 500;
+
+  span {
+    border-left: 4px solid #1487c8;
+    padding-left: 4px;
+    width: 30%;
+  }
+
+  div {
+    background-image: url("/img/ui/bias.svg");
+    position: absolute;
+    display: inline-block;
+    top: 4px;
+    width: 70%;
+    height: 25px;
+    background-size: inherit;
+    background-position: 25px 2px;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+}
+
+.left_content {
+  height: calc(100vh - #{$base-hearder-height} - 202px);
+  width: 100%;
+  overflow: auto;
+  padding: 5px
+}
+
+.left_content_mugang {
+  height: calc(100vh - #{$base-hearder-height} - 136px);
+  width: 100%;
+  overflow: auto;
+  padding: 5px
+}
+
+//自定义
+.ulCont {
+  list-style: none;
+  padding-left: 10px;
+
+  .harborfont {
+    position: relative;
+    font-size: 14px;
+    color: #fff;
+
+    .ponit_state {
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      line-height: 20px;
+      border-radius: 50%;
+      background-color: $btncolor;
+    }
+  }
+}
+
+
+
+::v-deep .el-input--small .el-input__inner {
+  background: #0f1c40;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #122b54;
+}
+
+::v-deep .el-input--small .el-input__inner::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12px;
+}

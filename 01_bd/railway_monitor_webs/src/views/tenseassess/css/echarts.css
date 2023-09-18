@@ -1,0 +1,32 @@
+.left_date {
+  position: absolute;
+  display: flex;
+  left: 4%;
+  top: 16%;
+}
+.year,
+.month,
+.day {
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 20px;
+  color: #fefefe;
+  font-size: 13px;
+  font-family: "MicrosoftYaHei", "微软雅黑", sans-serif;
+  width: 40px;
+  height: 20px;
+  /* width: 55px;
+  height: 23px; */
+  box-shadow: 3px 3px 7px #bbb, -3px -3px 7px #bbb;
+  margin-right: 10px;
+}
+.active {
+  /* border: 1px solid #359da0; */
+  box-shadow: 3px 3px 7px #359da0, -3px -3px 7px #359da0;
+}
+.searchinput {
+  position: absolute;
+  left: 4%;
+  top: 2%;
+  width: 30%;
+}

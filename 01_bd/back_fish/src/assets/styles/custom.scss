@@ -1,0 +1,54 @@
+// 美化滚动条
+::-webkit-scrollbar {
+  width: 6px;
+  // height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  width: 6px;
+  background: rgba(#101f1c, 0.1);
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(144, 147, 153, 0.5);
+  background-clip: padding-box;
+  min-height: 28px;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(144, 147, 153, 0.3);
+}
+
+//全局树的样式
+.el-tree-node {
+  white-space: nowrap;
+  outline: none;
+  background: #0f1c40;
+  color: #fff;
+}
+
+//form 每一项的标题
+.el-form-item__label {
+  color: #fff;
+}
+
+.el-radio {
+  color: #fff;
+}
+
+::v-deep .btn_custom {
+  font-size: 12px;
+  border-radius: 3px;
+  background: #122b54;
+  border: 0;
+  color: #1296db;
+  box-shadow: inset 3px 3px 3px #054588, inset -3px -3px 3px #054588;
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html style="width: 100%; height: 100%">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <!-- <link href="timeline.min.css" rel="stylesheet" /> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+    <script src="./vue.global.js"></script>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        font-family: 'Roboto';
+        background-color: #fff;
+      }
+      #app {
+        width: 100%;
+        height: 100%;
+      }
+
+      .containner {
+        display: flex;
+        width: 80%;
+        height: 80%;
+        background-color: #ecf0f1;
+        overflow: auto;
+        justify-content: center;
+        align-items: center;
+      }
+      .baseCss {
+        width: 200px;
+        height: 30px;
+        position: relative;
+      }
+      .context {
+        position: absolute;
+        right: 0px;
+        background: #8ea1cc;
+        color: #fff;
+      }
+      .contextTime {
+        margin: 10px 10px;
+      }
+      .contextEvent {
+        margin: 10px 10px;
+      }
+      .angleUp:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-width: 0 10px 10px;
+        border-style: solid;
+        border-color: transparent transparent #3fb58e;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: -10px;
+        z-index: 9999;
+      }
+      .angleDown:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-width: 10px;
+        border-style: solid;
+        border-color: #3fb58e transparent transparent;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: -20px;
+        z-index: 9999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div ref="containner" class="containner">
+        <div
+          class="baseCss"
+          v-for="(item,i) in timeLineData"
+          :key="i"
+          :style="{ backgroundColor: item.color, width: item.timeLineWidth }"
+        >
+          <div
+            v-if="i === 0"
+            :style="{ width:item.tooltipStyle.boxWidth,height:item.tooltipStyle.boxWidth,
+                 top: item.tooltipStyle.top, bottom: item.tooltipStyle.bottom,left:item.tooltipStyle.left }"
+            class="context angleDown"
+          >
+            <div class="contextTime">{{item.endTime}}</div>
+            <div class="contextEvent">{{item.event}}</div>
+          </div>
+          <div
+            v-else-if="i % 2 !== 1 && i !== 0"
+            :style="{ width:item.tooltipStyle.boxWidth,height:item.tooltipStyle.boxWidth,
+                 top: item.tooltipStyle.top, bottom: item.tooltipStyle.bottom,left:item.tooltipStyle.left }"
+            class="context angleDown"
+          >
+            <div class="contextTime">{{item.endTime}}</div>
+            <div class="contextEvent">{{item.event}}</div>
+          </div>
+          <div
+            v-else
+            :style="{ width:item.tooltipStyle.boxWidth,height:item.tooltipStyle.boxWidth,
+                 top: item.tooltipStyle.top, bottom: item.tooltipStyle.bottom }"
+            class="context angleUp"
+          >
+            <div class="contextTime">{{item.endTime}}</div>
+            <div class="contextEvent">{{item.event}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          boxWidth: '',
+          topMargin: 0,
+          timeLineData: [
+            {
+              startTime: '2018-11-26',
+              endTime: '2018-11-30',
+              //       timeRange: 4,
+              timeLineWidth: '',
+              color: '#fff',
+              eventType: '停泊',
+              event: '弹药装载',
+              tooltipStyle: {
+                top: '-10vw',
+                bottom: 0,
+                boxWidth: '',
+                left: '0px',
+              },
+            },
+            {
+              startTime: '2019-1-26',
+              endTime: '2019-2-30',
+              //       timeRange: 34,
+              timeLineWidth: '',
+              color: 'red',
+              eventType: '维修',
+              event: '修发动机',
+              tooltipStyle: {
+                bottom: '-10vw',
+                top: '30px',
+                boxWidth: '',
+              },
+            },
+            {
+              startTime: '2019-3-26',
+              endTime: '2019-11-30',
+              //       timeRange: 180,
+              timeLineWidth: '',
+              color: 'blue',
+              eventType: '行驶',
+              event: '开船去了',
+              tooltipStyle: {
+                top: '-10vw',
+                bottom: 0,
+                boxWidth: '',
+              },
+            },
+            {
+              startTime: '2020-1-26',
+              endTime: '2020-2-30',
+              //       timeRange: 50,
+              timeLineWidth: '',
+              color: 'gray',
+              eventType: '部署',
+              event: '跟家改造',
+              tooltipStyle: {
+                bottom: '-10vw',
+                top: '30px',
+                boxWidth: '',
+              },
+            },
+            {
+              startTime: '2020-3-26',
+              endTime: '2020-5-30',
+              //       timeRange: 60,
+              timeLineWidth: '',
+              color: 'yellow',
+              eventType: '战斗',
+              event: '战斗在一线',
+              tooltipStyle: {
+                top: '-10vw',
+                bottom: 0,
+                boxWidth: '',
+              },
+            },
+          ],
+        },
+        mounted() {
+          let clintWidth = this.$refs.containner.clientWidth
+          this.topMargin = clintWidth * 0.1 + 10 + 'px'
+          this.boxWidth = clintWidth * 0.1 + 'px'
+          // alert(this.boxWidth)
+          this.initData()
+        },
+        methods: {
+          initData() {
+            this.timeLineData.forEach((item, i) => {
+              //  debugger
+              item.timeRange = this.getTimeRange(item.startTime, item.endTime)
+              item.timeLineWidth = this.getTimeWidth(item.timeRange)
+              item.tooltipStyle.boxWidth = this.boxWidth
+              if (i % 2 !== 1) {
+                item.tooltipStyle.top = '-' + this.topMargin
+                item.tooltipStyle.bottom = '-10px'
+              } else {
+                item.tooltipStyle.bottom = '-' + this.boxWidth
+                item.tooltipStyle.top = '40px'
+              }
+            })
+            console.log(this.timeLineData)
+          },
+          getTimeRange(bt, et) {
+            // 两个日期相减
+            let days =
+              (new Date(et).getTime() - new Date(bt).getTime()) /
+              (24 * 60 * 60 * 1000)
+            return days
+          },
+          getTimeWidth(days) {
+            let pixel = 0
+            // 自定义长度的策略
+            // 如果天数小于10,1天=10px
+            // 如果天数大于10小于30,1天=5px
+            // 如果天数大于30小于100,1天=2px
+            // 如果天数大于100,1天=1px
+            let index = 1
+            for (var i = 0; i < days; i++) {
+              if (i < 10) {
+                pixel += index * 10
+              } else if (i >= 10 && i < 30) {
+                pixel += index * 5
+              } else if (i >= 30 && i < 100) {
+                pixel += index * 2
+              } else if (i >= 100) {
+                pixel += index * 1
+              }
+            }
+            pixel += 'px'
+            return pixel
+          },
+          getTimeColor(event) {
+            // 根据事件类型返回不同颜色
+            let color = ''
+            return color
+          },
+        },
+     
+      })
+    </script>
+  </body>
+</html>
+<!-- googleon: all -->

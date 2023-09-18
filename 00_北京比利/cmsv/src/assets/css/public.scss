@@ -1,0 +1,28 @@
+//公共的样式比如校验错误样式
+
+// tab栏的选中的样式
+::v-deep .fontColor {
+  color: #007bff !important;
+}
+a {
+  color: black;
+}
+
+// fileinput插件的必填的样式 v-requiredSty="v"
+.is-block {
+  border: 1px solid red;
+  border-radius: 5px;
+}
+.is-none {
+  border: 1px solid #28a745;
+  border-radius: 5px;
+  // border-color: #28a745;
+}
+//错误样式所有校验的样式提示
+.err {
+    font-size: 12px;
+    position: absolute;
+    width: 100%;
+    font-size: 80%;
+    color: #dc3545;
+}

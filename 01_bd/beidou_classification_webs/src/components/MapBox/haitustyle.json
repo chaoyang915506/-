@@ -1,0 +1,926 @@
+{
+	"version": 8,
+	"name": "黄骅_全国框架影像",
+	"metadata": {
+		"mapbox:autocomposite": true,
+		"mapbox:type": "default",
+		"maputnik:renderer": "mbgljs"
+	},
+	"center": [105.81, 35.1],
+	"zoom": 4.4,
+	"bearing": 0,
+	"pitch": 0,
+	"sources": {
+		"huanghua": {
+			"type": "vector",
+			"tiles": ["http://114.255.136.222:8800/data/huanghua_china/{z}/{x}/{y}.pbf"],
+			"minZoom": 0,
+			"maxZoom": 24
+		},
+		"chart": {
+			"type": "raster",
+			"tiles": ["http://www.yimasoftdemo.cc:800/mapimg/{z}/{y}/{x}.png"],
+			"minzoom": 0,
+			"maxzoom": 19
+		}
+	},
+	"sprite": "http://114.255.136.222:9200/styles/beijing_blue/sprite",
+	"glyphs": "http://114.255.136.222:9200/fonts/{fontstack}/{range}.pbf",
+	"layers": [{
+		"id": "background",
+		"type": "background",
+		"paint": {
+			"background-color": "rgba(9, 26, 56, 1)"
+		}
+	}, {
+		"id": "chart",
+		"type": "raster",
+		"source": "chart",
+		"layout": {
+			"visibility": "visible"
+		}
+	}, {
+		"id": "china_R",
+		"type": "fill",
+		"source": "huanghua",
+		"source-layer": "boundary_china_R",
+		"minzoom": 0,
+		"maxzoom": 3,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"fill-color": "rgba(8, 26, 55, 1)"
+		}
+	}, {
+		"id": "china_taiwan_R",
+		"type": "fill",
+		"source": "huanghua",
+		"source-layer": "china_taiwan_county_R",
+		"minzoom": 5,
+		"maxzoom": 24,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"fill-color": "rgba(10, 25, 54, 1)",
+			"fill-outline-color": "rgba(21, 47, 97, 0)"
+		}
+	}, {
+		"id": "china_province_R",
+		"type": "fill",
+		"source": "huanghua",
+		"source-layer": "china_boundary_province_R",
+		"minzoom": 3,
+		"maxzoom": 6,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"fill-color": "rgba(9, 26, 56, 1)",
+			"fill-outline-color": "rgba(24, 71, 152, 1)"
+		}
+	}, {
+		"id": "china_city_R",
+		"type": "fill",
+		"source": "huanghua",
+		"source-layer": "china_boundary_city_R",
+		"minzoom": 6,
+		"maxzoom": 14,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"fill-color": "rgba(8, 23, 52, 1)",
+			"fill-outline-color": "rgba(21, 62, 134, 1)"
+		}
+	}, {
+		"id": "china_water_R_1",
+		"type": "fill",
+		"source": "huanghua",
+		"source-layer": "china_water_R_1",
+		"minzoom": 2,
+		"maxzoom": 9,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"fill-color": "rgba(4, 64, 98, 1)",
+			"fill-outline-color": "rgba(4, 64, 98, 1)"
+		}
+	}, {
+		"id": "china_province_L_2",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "china_boundary_province_L_2",
+		"minzoom": 6,
+		"maxzoom": 14,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(24, 71, 152, 1)",
+			"line-width": 0.6
+		}
+	}, {
+		"id": "china_L",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "boundary_china_L",
+		"minzoom": 0,
+		"maxzoom": 8,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(23, 97, 165, 1)",
+			"line-width": 5
+		}
+	}, {
+		"id": "china_road_kuaisu-3",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "china_road_kuaisu_CL",
+		"minzoom": 4,
+		"maxzoom": 10,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(14, 41, 90, 1)",
+			"line-width": 0.8
+		}
+	}, {
+		"id": "china_road_kuaisu-9",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "china_road_kuaisu_CL",
+		"minzoom": 9,
+		"maxzoom": 10,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(14, 41, 90, 1)",
+			"line-width": 2
+		}
+	}, {
+		"id": "china_road_gaosu-3",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "china_road_gaosu_CL",
+		"minzoom": 4,
+		"maxzoom": 10,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(14, 41, 90, 1)",
+			"line-width": 0.8
+		}
+	}, {
+		"id": "china_road_gaosu-9",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "china_road_gaosu_CL",
+		"minzoom": 9,
+		"maxzoom": 10,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(14, 41, 90, 1)",
+			"line-width": 2
+		}
+	}, {
+		"id": "china_poi_province",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "china_poi_province_center",
+		"minzoom": 3,
+		"maxzoom": 4,
+		"layout": {
+			"text-field": "{NAME}",
+			"text-size": 15,
+			"icon-size": 0.1,
+			"visibility": "visible"
+		},
+		"paint": {
+			"icon-color": "rgba(247, 243, 243, 1)",
+			"text-color": "rgba(255, 255, 255, 1)",
+			"text-halo-color": "rgba(0, 0, 0, 1)",
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "china_poi_省会",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "china_poi_province_capital",
+		"minzoom": 4,
+		"maxzoom": 6,
+		"filter": ["none"],
+		"layout": {
+			"text-field": "{NAME}",
+			"visibility": "none",
+			"icon-image": "circle-12",
+			"text-anchor": "bottom-left",
+			"symbol-spacing": 100,
+			"symbol-avoid-edges": false,
+			"icon-allow-overlap": false,
+			"icon-optional": false,
+			"text-offset": [0.5, 0.5],
+			"text-size": 15
+		},
+		"paint": {
+			"text-color": "rgba(255, 255, 255, 1)",
+			"text-halo-color": "rgba(0, 0, 0, 1)",
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "china_poi_beijing",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "poi_beijing",
+		"minzoom": 3,
+		"maxzoom": 9,
+		"layout": {
+			"text-field": "{NAME}",
+			"visibility": "none",
+			"icon-image": "star-12",
+			"text-anchor": "bottom-left",
+			"text-offset": [0.5, 0.5],
+			"text-size": 16,
+			"icon-rotation-alignment": "auto"
+		},
+		"paint": {
+			"text-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-color": "rgba(255, 255, 255, 0)",
+			"text-halo-color": "rgba(0, 0, 0, 1)",
+			"icon-color": "rgba(245, 5, 5, 1)",
+			"icon-opacity": 1,
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "china_poi_city",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "china_poi_city",
+		"minzoom": 6,
+		"maxzoom": 8,
+		"layout": {
+			"text-field": "{NAME}",
+			"visibility": "none",
+			"icon-image": "circle-12",
+			"text-anchor": "bottom-left",
+			"text-size": 14,
+			"text-offset": [0.5, 0.5]
+		},
+		"paint": {
+			"text-color": "rgba(255, 254, 254, 1)",
+			"text-halo-color": "rgba(0, 0, 0, 1)",
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_city_R",
+		"type": "fill",
+		"source": "huanghua",
+		"source-layer": "huanghua_city_R",
+		"minzoom": 10,
+		"maxzoom": 16,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"fill-color": "rgba(8, 23, 52, 1)",
+			"fill-outline-color": "rgba(21, 62, 134, 1)"
+		}
+	}, {
+		"id": "huanghua_vegetation_R",
+		"type": "fill",
+		"source": "huanghua",
+		"source-layer": "huanghua_vegetation_R",
+		"minzoom": 10,
+		"maxzoom": 24,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"fill-color": "rgba(7, 56, 72, 1)"
+		}
+	}, {
+		"id": "huanghua_water_R",
+		"type": "fill",
+		"source": "huanghua",
+		"source-layer": "huanghua_water_R",
+		"minzoom": 10,
+		"maxzoom": 24,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"fill-color": "rgba(4, 64, 98, 1)",
+			"fill-outline-color": "rgba(4, 64, 98, 1)"
+		}
+	}, {
+		"id": "huanghua_city_L",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "huanghua_city_R",
+		"minzoom": 10,
+		"maxzoom": 24,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(24, 71, 152, 1)",
+			"line-width": 1
+		}
+	}, {
+		"id": "sz_road_L_1-10",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "huanghua_road_L_1",
+		"minzoom": 10,
+		"maxzoom": 11,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(14, 41, 90, 1)",
+			"line-width": 2
+		}
+	}, {
+		"id": "sz_road_L_1-11",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "huanghua_road_L_1",
+		"minzoom": 11,
+		"maxzoom": 14,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(14, 41, 90, 1)",
+			"line-width": 3
+		}
+	}, {
+		"id": "sz_road_L_1-14",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "huanghua_road_L_1",
+		"minzoom": 14,
+		"maxzoom": 24,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(14, 41, 90, 1)",
+			"line-width": 5
+		}
+	}, {
+		"id": "china_coastline",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "china_coastline",
+		"minzoom": 0,
+		"maxzoom": 24,
+		"layout": {
+			"visibility": "visible"
+		},
+		"paint": {
+			"line-color": "rgba(40, 125, 204, 1)",
+			"line-width": 2
+		}
+	}, {
+		"id": "huanghua_road2-14",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "huanghua_road_L_2",
+		"minzoom": 14,
+		"maxzoom": 24,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(14, 112, 177, 1)",
+			"line-width": 4
+		}
+	}, {
+		"id": "huanghua_road2_13",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "huanghua_road_L_2",
+		"minzoom": 13,
+		"maxzoom": 14,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(14, 112, 177, 1)",
+			"line-width": 2
+		}
+	}, {
+		"id": "huanghua_road2_11",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "huanghua_road_L_2",
+		"minzoom": 11,
+		"maxzoom": 13,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(14, 112, 177, 1)",
+			"line-width": 1
+		}
+	}, {
+		"id": "huanghua_road2-10",
+		"type": "line",
+		"source": "huanghua",
+		"source-layer": "huanghua_road_L_2",
+		"minzoom": 10,
+		"maxzoom": 11,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"line-color": "rgba(14, 112, 177, 1)",
+			"line-width": 1
+		}
+	}, {
+		"id": "sz_road_label_L_2",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_road_label_L_2",
+		"minzoom": 14,
+		"maxzoom": 24,
+		"layout": {
+			"visibility": "visible",
+			"text-field": "{PathName}",
+			"text-size": 14,
+			"symbol-placement": "line"
+		},
+		"paint": {
+			"icon-color": "rgba(247, 243, 243, 1)",
+			"text-color": "rgba(236, 240, 247, 1)",
+			"text-halo-color": "rgba(2, 36, 62, 1)",
+			"text-halo-width": 2
+		}
+	}, {
+		"id": "sz_road_label_L_1",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_road_label_L_1",
+		"minzoom": 10,
+		"maxzoom": 24,
+		"layout": {
+			"visibility": "visible",
+			"text-field": "{PathName}",
+			"text-size": 14,
+			"symbol-placement": "line"
+		},
+		"paint": {
+			"icon-color": "rgba(247, 243, 243, 1)",
+			"text-color": "rgba(236, 240, 247, 1)",
+			"text-halo-color": "rgba(2, 36, 62, 1)",
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_building_R-13",
+		"type": "fill-extrusion",
+		"source": "huanghua",
+		"source-layer": "huanghua_building_R",
+		"minzoom": 11,
+		"maxzoom": 13,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"fill-extrusion-color": "rgba(9, 30, 60, 0.73)",
+			"fill-extrusion-height": 0
+		}
+	}, {
+		"id": "huanghua_building_R-14",
+		"type": "fill-extrusion",
+		"source": "huanghua",
+		"source-layer": "huanghua_building_R",
+		"minzoom": 13,
+		"maxzoom": 24,
+		"layout": {
+			"visibility": "none"
+		},
+		"paint": {
+			"fill-extrusion-color": "rgba(9, 30, 60, 0.73)",
+			"fill-extrusion-height": {
+				"property": "HEIGHT",
+				"stops": [
+					[0, 0],
+					[24, 100]
+				]
+			}
+		}
+	}, {
+		"id": "huanghua_poi_town",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_poi_town",
+		"minzoom": 12,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 11,
+			"text-justify": "left",
+			"text-anchor": "left",
+			"icon-image": "circle-12",
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_poi_landmark1",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_poi_landmark1",
+		"minzoom": 12,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 11,
+			"text-justify": "left",
+			"text-anchor": "left",
+			"icon-image": "circle-12",
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_poi_gas_station",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_poi_gas_station",
+		"minzoom": 13,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 12,
+			"icon-image": "circle-12",
+			"text-justify": "left",
+			"text-anchor": "left",
+			"text-allow-overlap": false,
+			"text-keep-upright": true,
+			"text-optional": false,
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_poi_transport_service",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_poi_transport_service",
+		"minzoom": 13,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 12,
+			"icon-image": "circle-12",
+			"text-justify": "left",
+			"text-anchor": "left",
+			"text-allow-overlap": false,
+			"text-keep-upright": true,
+			"text-optional": false,
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_poi_public_service",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_poi_public_service",
+		"minzoom": 13,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 12,
+			"icon-image": "circle-12",
+			"text-justify": "left",
+			"text-anchor": "left",
+			"text-allow-overlap": false,
+			"text-keep-upright": true,
+			"text-optional": false,
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_poi_medical_service",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_poi_medical_service",
+		"minzoom": 13,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 12,
+			"icon-image": "circle-12",
+			"text-justify": "left",
+			"text-anchor": "left",
+			"text-allow-overlap": false,
+			"text-keep-upright": true,
+			"text-optional": false,
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_poi_hardware",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_poi_hardware",
+		"minzoom": 13,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 12,
+			"icon-image": "circle-12",
+			"text-justify": "left",
+			"text-anchor": "left",
+			"text-allow-overlap": false,
+			"text-keep-upright": true,
+			"text-optional": false,
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_poi_government",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_poi_government",
+		"minzoom": 13,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 12,
+			"icon-image": "circle-12",
+			"text-justify": "left",
+			"text-anchor": "left",
+			"text-allow-overlap": false,
+			"text-keep-upright": true,
+			"text-optional": false,
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_poi_vehicle",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_poi_vehicle",
+		"minzoom": 13,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 12,
+			"icon-image": "circle-12",
+			"text-justify": "left",
+			"text-anchor": "left",
+			"text-allow-overlap": false,
+			"text-keep-upright": true,
+			"text-optional": false,
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_poi_traffic_facilities",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_poi_traffic_facilities",
+		"minzoom": 13,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 12,
+			"icon-image": "circle-12",
+			"text-justify": "left",
+			"text-anchor": "left",
+			"text-allow-overlap": false,
+			"text-keep-upright": true,
+			"text-optional": false,
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_two_tower",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_two_tower",
+		"minzoom": 10,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 12,
+			"icon-image": "circle-12",
+			"text-justify": "left",
+			"text-anchor": "left",
+			"text-allow-overlap": false,
+			"text-keep-upright": true,
+			"text-optional": false,
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_three_rader_tower",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_three_rader_tower",
+		"minzoom": 10,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 12,
+			"icon-image": "circle-12",
+			"text-justify": "left",
+			"text-anchor": "left",
+			"text-allow-overlap": false,
+			"text-keep-upright": true,
+			"text-optional": false,
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_one_rod",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_one_rod",
+		"minzoom": 10,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 12,
+			"icon-image": "circle-12",
+			"text-justify": "left",
+			"text-anchor": "left",
+			"text-allow-overlap": false,
+			"text-keep-upright": true,
+			"text-optional": false,
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}, {
+		"id": "huanghua_four_tower_crane",
+		"type": "symbol",
+		"source": "huanghua",
+		"source-layer": "huanghua_four_tower_crane",
+		"minzoom": 10,
+		"maxzoom": 24,
+		"layout": {
+			"text-field": "{name}",
+			"text-size": 12,
+			"icon-image": "circle-12",
+			"text-justify": "left",
+			"text-anchor": "left",
+			"text-allow-overlap": false,
+			"text-keep-upright": true,
+			"text-optional": false,
+			"visibility": "visible",
+			"text-transform": "lowercase",
+			"text-offset": [0.5, 0]
+		},
+		"paint": {
+			"text-halo-color": "rgba(0, 32, 66, 1)",
+			"text-color": "rgba(236, 242, 251, 1)",
+			"icon-color": "rgba(255, 255, 255, 1)",
+			"icon-opacity": 1,
+			"icon-halo-color": "rgba(255, 255, 255, 1)",
+			"icon-halo-width": 1,
+			"text-halo-width": 1
+		}
+	}],
+	"id": "shenzhen_huanghua",
+	"owner": ""
+}

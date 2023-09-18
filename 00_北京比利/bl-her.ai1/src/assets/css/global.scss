@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dd,
+dt,
+p,
+a,
+form,
+select,
+input,
+span,
+ul,
+ol,
+li,
+figure {
+  margin: 0;
+  padding: 0;
+  // text-indent: 0;
+  // font-weight: normal;
+}
+body {
+  margin: 0 auto;
+  width: 100%;
+  color: #000;
+  font-family: 'Microsoft YaHei', Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+ul,
+ol {
+  list-style: none;
+  text-indent: 0;
+}
+
+img {
+  border: 0px;
+}
+
+/* link */
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: none;
+}
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.center {
+  text-align: center;
+}
+
+/*单行文本超出边界用省略号*/
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+}
+/*多行文本截取指定行数，超出用省略号，适用于移动端*/
+.ellipsis-rows {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/*清除浮动*/
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+// * {
+//   box-sizing: border-box;
+// }
+
+// body {
+//   color: #333;
+//   font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+// }
+
+// ul,
+// h1,
+// h3,
+// h4,
+// p,
+// dl,
+// dd {
+//   padding: 0;
+//   margin: 0;
+// }
+
+// a {
+//   text-decoration: none;
+//   color: #333;
+// }
+
+// i {
+//   font-style: normal;
+// }
+
+// input {
+//   outline: none;
+//   padding: 0;
+//   border: none;
+// }
+
+// img {
+//   max-width: 100%;
+//   max-height: 100%;
+//   vertical-align: middle;
+// }
+
+// ul {
+//   list-style: none;
+// }
+
+// .clearfix:before,
+// .clearfix:after {
+//   content: " ";
+//   display: table;
+// }
+
+// .clearfix:after {
+//   clear: both;
+// }
+
+// .clearfix {
+//   *zoom: 1;
+// }

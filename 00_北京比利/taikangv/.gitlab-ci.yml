@@ -1,0 +1,21 @@
+cache:
+  paths:
+    - node_modules/
+
+build:test:
+  stage: build
+  tags:
+    - shell
+  only:
+    - /^rel-.*$/
+  script:
+    - ./build.sh test
+
+build:stable:
+  stage: build
+  tags:
+    - shell
+  only:
+    - tags
+  script:
+    - ./build.sh stable

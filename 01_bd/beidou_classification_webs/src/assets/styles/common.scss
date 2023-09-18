@@ -1,0 +1,24 @@
+
+/**查看表单**/
+.el-form-check .el-form-item__label::before {
+  content: '' !important;
+}
+.el-form-check .el-input__wrapper,
+.el-form-check .el-textarea__inner
+{
+  background-color:transparent !important;
+  box-shadow: 0 0 0 0  !important;
+  // color: black !important;
+}
+.el-form-check .el-input__inner,
+.el-form-check .el-textarea__inner {
+  border: 0px;
+  background: #fff !important;
+  resize: none !important;
+  padding-left: 30px !important;
+  pointer-events: none !important;
+  
+}
+.el-form-check .el-icon {
+  display: none !important;
+}

@@ -1,0 +1,72 @@
+{
+  "map3d": {
+    "scene": {
+      "center": {
+        "lat": 160.822079,
+        "lng": -45.891721,
+        "alt": 21098707,
+        "heading": 360,
+        "pitch": -88
+      },
+      "scene3DOnly": false,
+      "shadows": false,
+      "removeDblClick": true,
+      "sceneMode": 3,
+     
+      "showSun": true,
+      "showMoon": true,
+      "showSkyBox": true,
+      "showSkyAtmosphere": true,
+      "fog": true,
+      "fxaa": true,
+      "requestRenderMode": true,
+      "backgroundColor": "#0f1c40",
+      "globe": {
+        "depthTestAgainstTerrain": false,
+        "baseColor": "#546a53",
+        "showGroundAtmosphere": true,
+        "enableLighting": false
+      },
+      "cameraController": {
+        "zoomFactor": 3.0,
+        "minimumZoomDistance": 1,
+        "maximumZoomDistance": 50000000,
+        "enableRotate": true,
+        "enableTranslate": true,
+        "enableTilt": true,
+        "enableZoom": true,
+        "enableCollisionDetection": true,
+        "minimumCollisionTerrainHeight": 15000
+      }
+    },
+    "templateValues": {
+      "dataServer": "//data.mars3d.cn",
+      "gltfServerUrl": "//data.mars3d.cn/gltf"
+    },
+    "terrain": {
+      "url": "//data.mars3d.cn/terrain",
+      "show": false
+    },
+    "basemaps": [
+      {
+        "pid": 10,
+        "name": "OSM地图",
+        "type": "xyz",
+        "icon": "img/basemaps/osm.png",
+        "subdomains": "abc",
+        "url": "http://192.168.1.50/hot/{z}/{x}/{y}.png",
+        "maximumLevel": 14,
+        "show": true
+      },
+      {
+        "pid": 11,
+        "name": "google离线地图",
+        "type": "xyz",
+        "icon": "/img/basemaps/google_img.png",
+        "subdomains": "abc",
+        "url": "http://192.168.1.50:18988/google/{z}/{x}/{y}.jpg",
+        "show": true
+      }
+    ]
+  }
+}

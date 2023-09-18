@@ -1,0 +1,363 @@
+// 公共的
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 18px;
+  opacity: 0.75;
+  line-height: 300px;
+  margin: 0;
+}
+.maxfixednav {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  z-index: 999;
+  .navlist .listSty {
+    margin-top: 0.4rem;
+  }
+  display:none;
+}
+.checkImg {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 15%;
+}
+.checkImg1{
+  position: absolute;
+  left: 0;
+  top: 29%;
+  width: 15%;
+}
+.checkImg2{
+  position: absolute;
+  left: 0;
+  top: 49%;
+  width: 15%;
+}
+.checkImg3{
+  position: absolute;
+  left: 0;
+  top: 49%;
+  width: 15%;
+}
+.checkImg4{
+  position: absolute;
+  left: 0;
+  top: 70%;
+  width: 15%;
+}
+.checkImg5{
+  position: absolute;
+  left: 0;
+  top: 90%;
+  width: 15%;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
+.navlist {
+  margin-left: 0.3rem;
+}
+.info_title {
+  font-size: 14px;
+  font-family: Medium;
+  text-align: left;
+  font-weight: 500;
+  color: #d5773a;
+}
+.info {
+  font-size: 11px;
+  font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+  font-weight: 500;
+  color: #323232;
+}
+.briefing {
+  position: absolute;
+  display: none;
+  top: 24%;
+  left: 0;
+}
+.briefing .navlist .listSty {
+  margin-top: 0.4rem;
+}
+
+.allinfo {
+  position: absolute;
+  left: 35%;
+  width: 30%;
+  top: 0;
+}
+//轮播图的位置
+// .el-carousel--horizontal {
+//   width: 45%;
+//   position: absolute;
+//   left: 29%;
+//   top: 26%;
+// }
+
+/deep/.el-carousel__arrow {
+  display: none;
+}
+/deep/.el-carousel__button {
+  display: none;
+}
+
+//6个块的样式
+.boxChunk {
+  // position: fixed;
+  position: relative;
+  // position: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.img_style {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+.content-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+}
+
+// 宗旨样式
+.purpose_check {
+  position: absolute;
+  left: -0.3%;
+  top: 16%;
+  width: 1.6%;
+}
+.purpose_info {
+  position: absolute;
+  left: 37%;
+  width: 30%;
+  top: 0;
+}
+.purpose_tv {
+  position: absolute;
+  left: 33%;
+  width: 36%;
+  top: 25%;
+}
+.purpose_desc {
+  position: absolute;
+  left: 11%;
+  bottom: -8%;
+  width: 80%;
+  height: 40%;
+  text-align: center;
+  font-family: Medium;
+  h2 {
+    color: #000000;
+    font-size: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+  p {
+    font-size: 0.1rem;
+    font-weight: 500;
+    line-height: 0.2rem;
+  }
+  .orangeinfo {
+    color: #e47f3d;
+    font-weight: 500;
+    line-height: 0.2rem;
+  }
+}
+//战略思考
+.planinginfo {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.planing .planing_desc0 {
+  position: absolute;
+  left: 10%;
+  top: 57%;
+  text-align: center;
+  p {
+    line-height: 0.2rem;
+  }
+}
+.planing_desc1 {
+  position: absolute;
+  left: 36%;
+  top: 33%;
+  text-align: center;
+}
+.planing .planing_desc2 {
+  position: absolute;
+  right: 5%;
+  top: 57%;
+  text-align: center;
+  p {
+    line-height: 0.2rem;
+  }
+}
+.planing h2 {
+  color: #d5773a;
+  font-family: Semibold;
+  font-weight: 600;
+  font-size: 0.2rem;
+  margin-bottom: 0.1rem;
+}
+.planing p {
+  color: #838383;
+  font-family: PingFangSC-Medium, PingFang SC;
+  line-height: 0.1rem;
+  font-weight: 500;
+  font-size: 0.1rem;
+}
+//产品和服务
+.icon {
+  position: absolute;
+
+  width: 23%;
+}
+.num0 {
+  left: 13%;
+  top: 42%;
+  z-index: 1;
+}
+
+.num1 {
+  left: 39%;
+  top: 42%;
+}
+.num2 {
+  right: 12%;
+  top: 42%;
+}
+.piclist1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.next,
+.prev {
+  position: absolute;
+  width: 3%;
+  top: 50%;
+}
+.next {
+  left: 14%;
+}
+.prev {
+  right: 10%;
+}
+.product-title {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 9%;
+  color: #e47f3d;
+  font-weight: 600;
+  font-size: 0.3rem;
+}
+.product-desc {
+  position: absolute;
+  left: 32%;
+  bottom: 6%;
+  width: 70%;
+  font-size: 0.1rem;
+  line-height: 0.2rem;
+  font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+  font-weight: 500;
+  color: #323232;
+}
+.people {
+  position: absolute;
+  width: 10%;
+  z-index: 1;
+}
+.one_p {
+  left: 0;
+  top: 24%;
+}
+.four_p {
+  bottom: 46%;
+  left: 0%;
+}
+.three_p {
+  left: 0;
+  top: 38%;
+}
+.five_p {
+  left: 0;
+  bottom: 19%;
+}
+.six_p {
+  left: 0;
+  bottom: 5.4%;
+}
+//新闻
+.newdesc {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  h2 {
+    font-size: 0.1rem;
+    font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+    font-weight: 500;
+    color: #e47f3d;
+    line-height: 0.3rem;
+    text-align: left;
+  }
+  p {
+    font-size: 0.1rem;
+    font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+    font-weight: 400;
+    line-height: 0.16rem;
+    color: #323232;
+    text-align: left;
+  }
+}
+.new_0 {
+  left: 39%;
+  top: 31%;
+}
+.new_1 {
+  left: 39%;
+  top: 50%;
+}
+.new_2 {
+  left: 39%;
+  top: 65%;
+}
+//合作伙伴
+.productCount {
+  position: absolute;
+  left: 18%;
+  top: 30%;
+  width: 70%;
+}
+
+.product .productcheck {
+  top: 68%;
+}
+.product .newscheck {
+  top: 58%;
+}
+.product .servicecheck {
+  top: 48%;
+}
+.product .productcheck {
+  top: 48%;
+}
+.planing.planingcheck {
+  top: 38%;
+}
+.purpose .purposecheck {
+  top: 28%;
+}

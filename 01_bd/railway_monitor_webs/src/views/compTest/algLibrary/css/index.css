@@ -1,0 +1,52 @@
+
+.icon_list_style {
+  width: 98%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1%;
+}
+
+.left {
+  width: 60%;
+  padding-right: 5%;
+  text-align: center;
+}
+.right {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  padding-left: 2%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.dialog_deatils {
+  display: flex;
+  padding: 0 10%;
+  align-items: center;
+  color: white;
+}
+.left .el-form-item {
+  text-align: left;
+}
+.dialog_deatils::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  clear: both;
+}
+.img1,
+.img2 {
+  width: 100%;
+}
+.img1 {
+  margin-bottom: 10px;
+}
+.img2 {
+  margin-bottom: 20px;
+}
+.right .info {
+  color: white;
+}

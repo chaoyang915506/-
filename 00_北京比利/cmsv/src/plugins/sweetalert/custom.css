@@ -1,0 +1,33 @@
+.swal-footer {
+    text-align: center;
+}
+
+.swal-button {
+    width: 106px;
+    border-radius: 23px;
+    font-size: 16px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.swal-button--confirm {
+    background: rgba(253, 79, 126, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.swal-button--confirm:not([disabled]):hover {
+    background: #fd7298;
+    border-color: #fd7298;
+    color: #FFF;
+}
+
+.swal-button--confirm:not([disabled]):active {
+    background: #e44771;
+    border-color: #e44771;
+    color: #FFF;
+}
+
+.swal-button:focus {
+    box-shadow: none;
+}
